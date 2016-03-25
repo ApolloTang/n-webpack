@@ -7,7 +7,6 @@ import $ from 'jquery';
 // $('body').html('body content');
 
 import Button from './Components/Button';
-
 const button = new Button('google.com');
-button.render('#container', 'click me');
+button.render('a');
 

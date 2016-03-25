@@ -13,11 +13,16 @@ export default class Button {
         alert(this.link);
     }
 
-    render(selector, btnTxt) {
+    render(node) {
+        const text = $(node).text();
+        const btn = Mustache.render(template, {text})
+
+        console.log('text: ', text);
+        console.log('btn: ', btn);
+
         // Render our button
-        const $container=$(selector);
-        const button = Mustache.render(template, {text:btnTxt})
-        $container.html( button );
+        $(node).html( btn );
+
         // Attach our listeners
         $('.button').click(this.onClick.bind(this));
     }
