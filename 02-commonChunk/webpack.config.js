@@ -13,6 +13,7 @@ module.exports = {
             {
                 test: /\.js/,
                 loader: 'babel-loader',
+                // http://stackoverflow.com/questions/31799558/webpack-with-babel-loader-not-recognizing-import-keyword
                 query: { presets: ['es2015', 'react'] },
                 include: __dirname + '/src'
             },
