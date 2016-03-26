@@ -18,7 +18,7 @@ export default class Button {
         const text = $node.text();
         const btn = Mustache.render(template, {text})
 
-        console.log('$node: ', text);
+        console.log('$node: ', $node);
         console.log('text: ', text);
         console.log('btn: ', btn);
 

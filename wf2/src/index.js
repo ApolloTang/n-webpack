@@ -8,6 +8,7 @@ import $ from 'jquery';
 const el_a = document.querySelectorAll('.my-anchor');
 console.log('el_a: ', el_a);
 if (el_a.length) {
+// if (0) {
     require.ensure([], () => {
         // import Button from './Components/Button'; //<-- SyntaxError: 'import' may only appear at the top level
         const Button = require('./Components/Button').default;
@@ -16,13 +17,13 @@ if (el_a.length) {
     });
 }
 
-// If we have a title, render the Header component on it
-const el_h1 = document.querySelectorAll('h1');
-if (el_h1.length) {
+const el_header = document.querySelectorAll('.my-header');
+// if (0) {
+if (el_header.length) {
     require.ensure([], () => {
-        const Header = require('./Components/Header');
+        const Header = require('./Components/Header').default;
         const header = new Header();
-        header.replace('h1');
+        header.render('.my-header');
     });
 }
 
