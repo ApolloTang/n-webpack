@@ -1,10 +1,11 @@
 webpack = require('webpack');
 
 module.exports = {
-    entry: './src',
+    entry:  './src',
     output: {
         path: 'builds',
         filename: 'bundle.js',
+        chunkFilename: '[name].js',
         publicPath: 'builds/'
     },
     module: {
@@ -36,7 +37,6 @@ module.exports = {
         // can be a completely separate file (like vendor.js) or
         // it can be your main file.
         new webpack.optimize.CommonsChunkPlugin({
-            name:      'main', // Move dependencies to our main file
             children:  true, // Look for common dependencies in all children,
             minChunks: 2, // How many times a dependency must come up before being extracted
         }),
