@@ -1,0 +1,3 @@
+following webpack tutorial:
+    http://blog.madewithlove.be/post/webpack-your-bags/
+only up to commonChunkPlugin
