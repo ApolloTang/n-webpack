@@ -1,0 +1,4 @@
+Instead of public folder, we specify the output as 'build'
+The different is that The build folder wont be created unless it is in production deploy configuration.
+When in development configuration, all the bundled files and the generated HTML will be served from memory.
+
