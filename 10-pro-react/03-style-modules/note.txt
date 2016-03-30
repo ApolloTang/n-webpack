@@ -1,0 +1,7 @@
+http://www.pro-react.com/materials/appendixA/
+
+without webpack.config.js you can run the following
+    node_modules/.bin/webpack app/main.js public/bundle.js
+
+with webpack.config.js you can simply type:
+    node_modules/.bin/webpack
