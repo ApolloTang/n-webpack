@@ -15,16 +15,16 @@ module.exports = {
     module: {
         loaders: [
             {
-                // to install: npm i json-loader -D
+                // To install: npm i json-loader -D
                 test: /\.json$/,
                 loader: "json"
             },
             {
-                //npm i -S babel-core babel-loader babel-preset-es2015 babel-preset-react
+                // To install: npm i -S babel-core babel-loader babel-preset-es2015 babel-preset-react
                 test    : /\.jsx?$/,
                 exclude : /node_modules/,
                 loader  : 'babel',
-                query   : { presets : ['es2015','react'] }
+                // query   : { presets : ['es2015','react'] }  // require if not using .babalrc
             }
         ]
     },
