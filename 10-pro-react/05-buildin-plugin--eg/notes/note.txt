@@ -1,0 +1,2 @@
+BannerPlugin shows a banner in bundle.js
+
