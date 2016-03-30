@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool: 'source-map',
     devServer: {
-        contentBase: "./public",
+        // contentBase: "./public", // <--- not required
         colors: true,
         historyApiFallback: true,
         inline: true,
