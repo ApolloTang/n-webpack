@@ -8,7 +8,7 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         port: 9999,
-        hot: true //<------ [!]
+        hot: true
     },
     entry:  __dirname + "/app/main.js",
     output: {
@@ -30,12 +30,9 @@ module.exports = {
                 // query   : { presets : ['es2015','react'] }  // required if not using .babalrc
             },
             {
-                // To install: npm i -D style-loader css-loader
-                // To install: npm i -D postcss-loader
-                test: /\.css$/,
-                loader: 'style!css?modules!postcss'
-                                         // ^-- css is transformed b4 load into modules
-                                         // according to section in 'postcss'
+                // To install: npm i -D style-loader css-loader postcss-loader less-loader less
+                test: /\.less$/,
+                loader: 'style!css?modules!postcss!less'
             }
         ]
     },
